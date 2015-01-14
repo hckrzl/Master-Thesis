@@ -1,0 +1,312 @@
+%%==========================
+%% chapter01.tex for SJTU Master Thesis
+%% based on CASthesis
+%% modified by wei.jianwen@gmail.com
+%% version: 0.3a
+%% Encoding: UTF-8
+%% last update: Dec 5th, 2010
+%%==================================================
+
+%\bibliographystyle{sjtu2} %[此处用于每章都生产参考文献]
+\chapter{研究背景}
+\label{chap:introduction}
+
+
+
+%\section{数据库驱动认知无线电网络}
+
+无线网络凭着它各方面的优点,越来越受到人们的关注。当前无线网络已经表现出迅猛的发展势头，不仅是在企业中，还包括家庭、公共接入和嵌入式设备市场等。无线网络正在改变着人们的种种观念以及生活方式。市场研究公司ABI Research于2013年发布的统计数据显示，全球物联网上的无线联网设备总数已经突破100亿台，预计2020年将达到300亿台，而且这个数字还在持续迅速增长。随着智能手机以及各种无线应用的发展，无线频谱资源正面临着前所未有的紧迫需求。当前对无线频谱的管理采用固定分配的政策，30MHz$\sim$3GHz的无线频段都已分配给固定的无线业务。美国联邦通信委员会（Federal Communication Commission, FCC）的资料显示，当前实际环境中无线频谱的使用情况随着时间和地理位置发生变化，其频谱利用率的时间和空间变化率可达$15\% \sim 85\%$\cite{akyildiz2006next}。大部分固定分配的无线频谱资源的时间利用率和空间利用率非常低，这直接导致稀缺的无线频谱资源变得更加紧张。
+
+Joseph Mitola博士于1999年提出了认知无线电的概念\cite{mitola1999cognitive}。他指出认知无线电是一种智能化的软件无线电，是更灵活的的软件无线电。认知无线电是一种智能频谱共享技术，“认知”意味着网络具有对周围无线频谱的感知能力，即能够嗅探其所处空间周围的无线频谱使用情况，发现一定时间空间范围内的空闲频谱（频谱空洞）。认知无线电网络中的用户设备能够对获取的信息进行处理和学习,从而进行动态智能决策。认知无线电的实现基于软件无线电的可编程性，在发现频谱空洞时可以智能调整通信参数，从而伺机使用这些临时未被使用的频谱。认知无线电技术现在已经被学术界和工业界公认为解决无线频谱资源匮乏问题的最佳手段。认知无线电网络中有两种用户：主用户和认知用户。主用户是频谱注册用户，是频谱的合法所有者，可以无条件使用无线电管理部门已预先分配的频谱资源，对已申请频谱资源具有排他的使用权。认知用户没有固定的频谱使用权，只能通过对其周围环境中的频谱使用情况进行学习并发现频谱空洞，才能伺机利用这些频谱空洞伺机进行通信。主用户对无线频谱使用的排他性是指在一定的保护范围内，认知用户不允许接入网络，以免其发射信号对主用户造成干扰。认知无线电网络的典型结构如图\ref{fig:crn}所示。
+
+\begin{figure}[!htp]\label{fig:crn}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/chap1/crn}\bicaption[fig:crn]{认知无线电网络组网结构}{认知无线电网络组网结构}{Fig}{Architecture of Cognitive Radio Networks}
+\end{figure}
+
+认知无线电网络应该具备以下功能模块\cite{akyildiz2006next}：
+
+（1）频谱感知：认知用户设备必须具备比较准确的感知无线频谱的能力,能够在相应的频段内进行频谱检测,识别频谱空洞，在保证不干扰主用户的前提下使用频谱；
+
+（2）频谱管理：网络能够捕获最佳的信道，从而满足用户对频谱资源质量的要求；
+
+（3)频谱移动：为避免对主用户造成干扰，认知用户设备必须具备在不同频段的频谱资源之间实现无缝切换的能力；
+
+（4）频谱共享：在存在多个用户设备时，网络能够为所有认知用户设备提供一个公平的频谱资源调度。
+
+其中感知功能是认知无线电网络中的关键环节，是认知无线电网络能够实现的前提条件。当前比较流行的频谱感知技术主要有能量感知和特征检测等。能量感知的优点是速度快，但精确度不是很高；与之相反，特征检测的精确度相对比较高但是运行速度较慢。由于单个用户的感知结果可能会因为遮挡、衰落等原因与实际频谱占用情况有偏差，因此为提高频谱感知的精确性，研究者提出合作感知机制，即网络中每个用户设备先进行独立感知，然后若干用户将感知结果上报给融合中心进行计算并确定最终的可用频谱。这是当前主流的频谱感知方式，但它在大大提高了频谱感知精确性的同时，也引入了一些严重的安全和隐私问题。关于合作频谱感知的安全问题，已有大量研究者进行了研究。目前提出的主要的安全威胁主要有：
+
+（1）模仿主用户攻击：攻击者在信道上发送与主用户特征相同的信号,导致其他认知用户误以为主用户存在，因此认知用户将此数据信道判定为不可用,无法使用该信道，导致频谱资源浪费。
+
+（2）阻塞攻击：由于无线信道中的广播特性，攻击者可以随机或有针对性地选择某些可用信道进行阻塞,从而导致认知用户无法利用空闲信道进行正常通信。
+
+（3）频谱感知数据篡改攻击：攻击者向邻居节点或融合中心发送错误的本地频谱感知信息,导致接收者做出错误的频谱感知判断结果，进而可能导致对主用户造成干扰。
+
+（4）虚假申请攻击：恶意的认知用户通过对信道的申请,获得信道临时使用权后,却并不使用此信道。这种行为严重增加了网络负载并造成资源浪费。
+
+由于合作频谱感知涉及的环节较多，硬件成本以及计算复杂度较高，同时感知结果的精确度还比较依赖环境和一些人为因素，因此不太适合在现实中大规模部署。
+
+
+一种可供替代的实现认知无线电网络的机制是数据库驱动认知无线电网络（Database-driven CRNs）。FCC于2008年首次公布关于数据库驱动认知无线电网络的提议并于2012年首次发布了关于数据库驱动认知无线电的相关规定，明确声明取消认知无线电网络用户必须具备频谱感知能力的限制。在数据库驱动认知无线电网络中，每个辖区范围内设定一个中心数据库服务器，辖区内的认知用户只要向数据库提交地理位置信息即可获取该位置的可用频谱。FCC指定了包括Google Inc.等九个公司作为数据库的管理者。据报道，Koos Technical Services Inc.和Telecodia Technologies Inc.两家公司已经获得FCC批准并已实现了数据库运营。与之前所述的传统认知无线电技术相比，数据库驱动认知无线电使用数据库查询方式取代了频谱感知来获取可用频谱信息，将频谱学习的复杂功能从用户终端中剥离并转移至中心数据库。这种简单的可用频谱获取方式具有更好的准确性和易用性，更适合在现实中部署，因此一经提出便迅速得到了政府和工业界的认可。数据库驱动认知无线电网络要求每个认知用户接入中心数据库并根据位置来查询可用频谱。中心数据库负责生成和维护其服务范围内的可用频谱信息。认知用户的可用频谱查询过程基于预先建立的Internet连接，由安全套接层/传输层安全协议（SSL/TLS）负责保证网络传输层以下的信息安全。
+
+
+从网络安全的角度考虑来讲，在数据库驱动认知无线电网络中，大部分传统认知无线电网络合作频谱感知过程中存在的攻击都可以避免。尽管如此，数据库驱动认知无线电网络仍然带来了新的安全问题。网络中的可用频谱信息由数据库根据网络中用户的分布和较为复杂的环境因素计算得到。因此，可用频谱信息与网络中用户的位置具有一定的相关性，对可用频谱信息的分析可能导致用户位置隐私的泄露。近年来，人们对隐私保护的关注度越来越高，因此隐私问题一直是很多领域相关研究工作中的重点。在无线网络中，由于其广播的特性，使得潜在的攻击者能够很容易地获取通信过程中的数据并进行分析从而危害用户的隐私安全。近年来，随着各种无线应用的飞速发展，给人们使用网络服务带来了很大方便，但与此同时，其隐私保护方面的形势也越来越严峻。尤其在近年来发展迅速的基于位置服务（Location Based Service, LBS）系统中，用户根据所处位置获得相应服务，这使得用户的位置隐私直接暴露在外，甚至用户所经历的时空轨迹都有可能被攻击者非法获取。更进一步，用户的位置隐私与其他方面隐私密切相关，位置隐私泄露将会直接导致更严重的其他方面的隐私泄露。数据库驱动认知无线电网络是LBS的一种应用形式，网络中有两类用户：固定用户和移动用户，其中移动用户又分为第一类移动用户和第二类移动用户。第二类移动用户具备定位和直接接入数据库的能力，第一类移动用户不具备定位和直接接入数据库的能力，只能向周围的第二类移动用户或固定用户查询可用频谱。无论固定用户还是移动用户，都同样面临着传统LBS中存在的隐私泄露风险。具体地讲，固定的认知用户需要提交精确地理位置才能获得准确的可用频谱信息，数据库可以直接获取认知用户的位置，即使通过适当的手段将认知用户位置信息隐藏\cite{gao2013location}，数据库还是可以通过认知用户的频谱使用记录和频谱的覆盖范围来推测认知用户的位置。与此同时，由于数据库提供的可用频谱信息与网络中主用户的位置具有较大的相关性，恶意的认知用户还能够根据其收集到的可用频谱信息对主用户进行位置推断攻击。此外，对于网络中移动的认知用户，由于其在运动轨迹上所经历的可用频谱以及使用过的频谱与轨迹信息具有同样的相关性，因此也面临着一定的轨迹隐私泄露风险。传统的LBS中的隐私保护方式无法直接应用与数据库驱动认知无线电场景中，因为相比其他LBS应用而言，数据库驱动认知无线电网络中对用户提交的地理位置要求更严格，一般要求定位误差小于50米，而且要求每个认知用户具有唯一不变的身份标识，因此如何保护用户的位置和轨迹隐私是一个具有挑战性的问题。我们将在第二章对相关领域的研究工作进行简要总结并在后续章节对数据库驱动认知无线电网络中的位置隐私和轨迹隐私的研究工作进行详细论述。
+
+
+
+
+%现在，交大学位论文 \LaTeX 模板的代码在github上维护，地址是：
+%
+%	\url{https://github.com/weijianwen/sjtu-thesis-template-latex/}
+
+
+
+%\begin{itemize}
+%	\item \href{https://github.com/weijianwen/sjtu-thesis-template-latex/archive/bachelor-0.5.3.zip}{交大学士学位论文模板\version} 
+%	\item \href{https://github.com/weijianwen/sjtu-thesis-template-latex/archive/master-0.5.3.zip}{交大硕士学位论文模板\version}
+%	\item \href{https://github.com/weijianwen/sjtu-thesis-template-latex/archive/phd-0.5.3.zip}{交大博士学位论文模板\version}
+%\end{itemize}
+%
+%欢迎大家使用交大学位论文模板！你可以通过如下的途径反馈模板使用过程中遇到的问题：\href{https://github.com/weijianwen/sjtu-thesis-template-latex/issues}{开issue}
+%\href{https://bbs.sjtu.edu.cn/bbsdoc?board=TeX_LaTeX}{水源LaTeX版}发帖，或者是给\href{mailto:weijianwen@gmail.com}{我}发送邮件---你可能需要好几天才能收到我的邮件回复。
+%
+%
+%
+%\label{sec:features}
+%
+%这个模板使用的中文解决方案是 \XeTeX/\LaTeX 。
+%参考文献使用BibTeX处理，可以生成符合国标GBT7714风格的参考文献列表。
+%模板在Windows，Linux和Mac OS X下测试通过，更详细的系统要求请参考\ref{sec:requirements}。
+%
+%模板的外观表现和功能都放在sjtuthesis.cls和sjtuthesis.cfg中，在对外观进行细微调整时，只需要更新这两个文件，不需要对.tex源文件做修改。
+%
+%最后，给出一个列表，罗列一下这个模板的功能要点：
+%
+%\begin{itemize}
+%\item 使用 \XeTeX 引擎处理中文；
+%\item 包含中文字符的源文件(.tex, .bib, .cfg)，编码都使用UTF-8；
+%\item 使用BibTeX处理参考文献。参考文献表现形式(格式)受.bst控制，方便在不同风格间切换，目前生成的列表符合国标GBT7714要求；
+%\item 可以直接插入EPS/PDF/JPG/PNG格式的图像，并且\emph{不需要}bounding box文件(.bb)。
+%\item 模板的格式受sjtumater-xetex.cls和sjtuthesis.cfg控制，方便模板更新和模板修改。
+%\end{itemize}
+%
+%\subsection{系统要求}
+%\label{sec:requirements}
+%
+%要使用这个模板协助你完成研究生学位论文的创作，下面的条件必须满足：
+%
+%\begin{itemize}
+%\item 操作系统字体目录中有TeX Gyre Termes西文的：Regular, Italic, Bold, Bold Italic四种OTF字体\footnote{TeX Gyre Termes字体可以从\href{http://www.gust.org.pl/projects/e-foundry/tex-gyre/termes}{http://www.gust.org.pl/projects/e-foundry/tex-gyre/termes}下载。我也附带了一份TeX.Gyre.Termes.Fonts.zip在模板中，解压缩到字体目录后用fc-cache -fv刷新即可，用fc-list应该能看到。}；
+%\item 操作系统字体目录中有AdobeSongStd、AdobeKaitiStd、AdobeHeitiStd、AdobeFangsongStd四款中文字体\footnote{Adobe这四款中文OTF字体可以从Adobe Reader安装目录拿到。}；
+%\item \TeX 系统有 \XeTeX 引擎；
+%\item \TeX 系统有ctex宏包；
+%\item 你有使用 \LaTeX 的经验。
+%\end{itemize}
+%
+%你可以试着编译模板文件夹中自带的test.tex文件，看看你的 \TeX 系统是否满足上面的要求：
+%
+%\begin{lstlisting}[basicstyle=\small\ttfamily, caption={编译测试文件test.tex}, numbers=none]
+%xelatex test.tex
+%\end{lstlisting}
+%
+%如果编译出的test.pdf中能够：显示中英文内容、显示4幅图像、正确嵌入AdobeSongStd和TeXGyreTermes字体（通过PDF阅读器的“属性”查看）、并且看到了英文字符的连字(ligature)和\textsc{SmallCapital}特性，那么恭喜你，你的 \TeX 系统应该能够编译这个学位论文模板。
+%
+%目前，我在手头的几个 \TeX 环境上都做过测试，MacTeX 2011, TeXLive 2011和C\TeX 2.9都能够顺利编译。在你到版上抱怨模板不能工作前，请确定你的 \TeX 系统能够编译前面的test.tex文件。欢迎大家到\href{https://bbs.sjtu.edu.cn/bbsdoc?board=TeX_LaTeX}{水源LaTeX版}反馈问题。为了提高解决问题的速度，请在帖子中说明：是否顺利编译模板、错误提示、操作系统版本、\TeX 系统版本和最近对 \TeX 系统做的操作(如升级等)。
+% 
+%\subsection{模板文件布局}
+%\label{sec:layout}
+%
+%\begin{lstlisting}[basicstyle=\small\ttfamily,caption={模板文件布局},label=layout,float,numbers=none]
+%  |-- diss.tex
+%  |-- README.pdf
+%  |-- sjtuthesis.cfg
+%  |-- sjtuthesis.cls
+%  |-- body
+%  |   |-- abstract.tex
+%  |   |-- app1.tex
+%  |   |-- app2.tex
+%  |   |-- chapter01.tex
+%  |   |-- chapter02.tex
+%  |   |-- conclusion.tex
+%  |   |-- projects.tex
+%  |   |-- pub.tex
+%  |   |-- resume.tex
+%  |   |-- symbol.tex
+%  |   \-- thanks.tex
+%  |-- figures
+%  |   \-- chap2
+%  |-- GBT7714-2005NLang.bst
+%  |-- Makefile
+%  |-- reference
+%  |   |-- chap1.bib
+%  |   \-- chap2.bib
+%  |-- test.tex
+%  \-- test.pdf
+%\end{lstlisting}
+%
+%你拿到手的模板文件大致会包含代码\ref{layout}所列的文件，乍看起来还是挺令人头大的。
+%并且，这还是“干净”的时候，等到真正开始处理的时候，会冒出相当多的“中间文件”，这又会使情况变得更糟糕。
+%所以，有必要对这些文件做一些简要说明。
+%看完这部分以后，你应该发现，其实你要关心的文件类型并没有那么多。
+%
+%\subsubsection{格式控制文件}
+%\label{sec:format}
+%
+%格式控制文件控制着论文的表现形式，包括以下几个文件：
+%sjtuthesis.cfg, sjtuthesis.cls和GBT7714-2005NLang.bst。
+%其中，``.cfg''和``.cls''控制论文主体格式，``.bst''控制参考文献条目的格式，
+%
+%一般用户最好``忽略''格式控制文件的存在，不要去碰它们。
+%有其他格式需要，欢迎到板上发贴。
+%对于因为擅自更改格式控制文件出现的问题，我不一定能够解决。
+%
+%\subsubsection{主控文件diss.tex}
+%\label{sec:disstex}
+%
+%主控文件diss.tex的作用就是将你分散在多个文件中的内容``整合''成一篇完整的论文。
+%使用这个模板撰写学位论文时，你的学位论文内容和素材会被``拆散''到各个文件中：
+%譬如各章正文、各个附录、各章参考文献等等。
+%在diss.tex中通过``include''命令将论文的各个部分包含进来，从而形成一篇结构完成的论文。
+%封面页中的论文标题、作者等中英文信息，也是在diss.tex中填写。
+%部分可能会频繁修改的设置，譬如行间距、图片文件目录等，我也放在了diss.tex中。
+%你也可以在diss.tex中按照自己的需要引入一些的宏包
+%\footnote{我对宏包的态度是：只有当你需要在文档中使用那个宏包时，才需要在导言区中用usepackage引入该宏包。如若不然，通过usepackage引入一大堆不被用到的宏包，必然是一场灾难。由于一开始没有一致的设计目标，\LaTeX 的各宏包几乎都是独立发展起来的，因重定义命令导致的宏包冲突屡见不鲜。}
+%。
+%
+%大致而言，在diss.tex中，大家只要留意把``章''一级的内容，以及各章参考文献内容包含进来就可以了。
+%需要注意，处理文档时所有的操作命令 \cndash{} xelatex, bibtex等，都是作用在diss.tex上，而\emph{不是}后面这些``分散''的文件，请参考\ref{sec:process}小节。
+%
+%\subsubsection{论文主体文件夹body}
+%\label{sec:thesisbody}
+%
+%这一部分是论文的主体，是以``章''为单位划分的。
+%
+%正文前部分(frontmatter)：中英文摘要(abstract.tex)。其他部分，诸如中英文封面、授权信息等，都是根据diss.tex所填的信息``画''好了，
+%不单独弄成文件。
+%
+%正文部分(mainmatter)：自然就是各章内容chapter\emph{xxx}.tex了。
+%
+%正文后的部分(backmatter)：附录(app\emph{xx}.tex)；致谢(thuanks.tex)；攻读学位论文期间发表的学术论文目录(pub.tex)；个人简历(resume.tex)。
+%参考文献列表是``生成''的，也不作为一个单独的文件。另外，学校的硕士研究生学位论文模板中，也没有要求加入个人简历，所以我没有在diss.tex中引入resume.tex。
+%
+%\subsubsection{图片文件夹figures}
+%\label{sec:figuresdir}
+%
+%figures文件夹放置了需要插入文档中的图片文件(PNG/JPG/PDF/EPS)，建议按章再划分子目录。
+%
+%\subsubsection{参考文献数据库文件夹reference}
+%\label{sec:bibdir}
+%
+%reference文件夹放置的是各章``可能''会被引用的参考文献文件。
+%参考文献的元数据，例如作者、文献名称、年限、出版地等，会以一定的格式记录在纯文本文件.bib中。
+%最终的参考文献列表是BibTeX处理.bib后得到的，名为diss.bbl。
+%将参考文献按章划分的一个好处是，可以在各章后生成独立的参考文献，不过，现在看来没有这个必要。
+%关于参考文献的管理，可以进一步参考第\ref{chap:example}章中的例子。
+%
+%\subsection{如何使用模板}
+%\label{sec:process}
+%
+%模板的 \LaTeX 源文件需要用 \XeTeX 编译产生PDF文件。
+%我在此给出三种命令行下的编译方式：逐行手工执行、使用脚本、使用latexmk，大家可以根据自己的喜好，选择\emph{其中一种}完成工作。
+%
+%\subsubsection{逐行手工执行}
+%
+%模板使用 \XeTeX 引擎提供的xelatex的命令处理，作用于“主控文档”diss.tex。并且，可以省略扩展名。
+%在命令提示符下逐行敲入如下命令完成编译。
+%
+%\begin{lstlisting}[basicstyle=\small\ttfamily, caption={手动执行编译过程}, numbers=none]
+%xelatex -no-pdf --interaction=nonstopmode diss
+%bibtex diss 
+%xelatex -no-pdf --interaction=nonstopmode diss 
+%xelatex --interaction=nonstopmode diss 
+%\end{lstlisting}
+%
+%运行bibtex的时候会提示一些错误，猜测是{{\sc Bib}\TeX}对UTF-8支持不充分，一般不影响最终结果。留意因为拼写错误导致的``找不到文献错误''即可。
+%
+%基本处理流程就是这样，一些 \LaTeX 排版的小例子可以参考第二章。
+%
+%\subsubsection{使用脚本}
+%
+%为方便使用，我把上面几条命令放到了两个脚本文件中。
+%Linux用户可以使用run.sh脚本，Windows用户可以使用run.bat。
+%
+%\subsubsection{使用GNU make编译}
+%
+%模板自带了一个简单的Makefile，使用make可以方便地完成相应任务，如 pdf, view, clean, distclean等。
+%
+%\begin{lstlisting}[basicstyle=\small\ttfamily, caption={使用GNU make编译}, numbers=none]
+%make && make view
+%\end{lstlisting}
+%
+%\section{从 \CJKLaTeX 转向 \XeTeX}
+%\label{sec:whydvipdfm}
+%
+%我习惯把v0.2a使用dvipdfmx编译的硕士学位论文模板称为``\CJKLaTeX 模板''，而这个使用 \XeTeX 引擎(xelatex程序)处理的模板则被称为``\XeTeX/\LaTeX 模板''。
+%从 \CJKLaTeX 模板迁移到 \XeTeX\LaTeX 模板的好处有下：
+%\begin{enumerate}
+%\item[\large\smiley] 搭建 \XeTeX 环境比搭建 \CJKLaTeX 环境更容易；
+%\item[\large\smiley] 更简单的字体控制；
+%\item[\large\smiley] 完美支持PDF/EPS/PNG/JPG图片，不需要``.bb''文件；
+%\item[\large\smiley] 支持OpenType字体的复杂字型变化功能(通常只有字母字体才有，学术文章也暂时用不上)；
+%\end{enumerate}
+%
+%当然，这也是有代价的。由于 \XeTeX 比较新，在我看来，使用 \XeTeX 模板所必须付出的代价是：
+%
+%\begin{enumerate}
+%\item[\large\frownie] 必须把你“古老的” \TeX 系统更新为较新的版本。TeXLive 2012和CTeX 2.9.2能够编译这份模板，而更早的版本则无能为力。
+%\item[\large\frownie] 需要花一些时间把你在老模板上的工作迁移到新模板上。
+%\end{enumerate}
+%
+%第一条就看你如何取舍了，新系统通常意味着更好的兼容性，值得升级。而转换模板也不是什么特别困难的事情，可以这样完成：
+%
+%\begin{enumerate}
+%\item 备份你要转换的源文件，以防你的工作成果丢失；
+%\item 将你原来的``.tex''和``.bib''文件"另存为"UTF-8编码的文件。iconv、vim、emacs、UEdit等等工具都可以完成。WinEdt对文件编码识别功能很差(到了v6.0还是如此)，不推荐作为字符编码转换工具；
+%\item 将diss.tex导言区中的内容替换为XeTeX模板diss.tex导言区的内容；
+%\item 将你对原先导言区的修改，小心翼翼地``合并''到新的导言区中；
+%\item 使用XeTeX模板中的GBT7714-2005NLang.bst替换原有的bst文件，新的bst文件只是将字符编码转换为UTF--8。
+%\item 删除bouding box文件``.bb''；
+%\item 使用本文\ref{sec:process}介绍的方法，重新编译文档；
+%\end{enumerate}
+%
+%\section{硕士学位论文格式的一些说明}
+%\label{sec:thesisformat}
+%
+%所有关于研究生学位论文模板的要求，我参考的都是下面这个教务处的网址
+%\href{http://www.gs.sjtu.edu.cn/policy/fileShow.ahtml?id=130}{《上海交通大学研究生学位论文格式的统一要求 》}。
+%
+%可惜，这个网址没有给出具体可用的“模板文件”。
+%并且，``要求''中的一些要求也不仅合理，譬如，公式和公式编号之前要用……连接，实现起来困难，看起来也不美观，从来没有人这样用，所以无视之。
+%师兄师姐的学位论文也是我可以参考的“范本”，尽管这些范本也不是很规范。
+%我希望制作出的这个学位论文模板尽可能符合教务处的要求，如果有任何建议，欢迎提出！
+%
+%这个模板是为``双面打印''准备的，也就是说，迎面页总是奇数页，新的一章将从奇数页开始，``迎面页''和``背面页''(或者说奇数页和偶数页)的左右页眉是相互颠倒的，奇数页和偶数页的左右页边距也会被颠倒。通过双面打印得到的学位论文就像一本正常的书。
+%
+%你可以将diss.tex中设定文档类的语句改为：
+%
+%\begin{quote}
+%  {\scriptsize\verb+\documentclass[cs4size, a4paer, cs4size, oneside, openany]{sjtuthesis}+}
+%\end{quote}
+%
+%这样，就变成了适合“单面打印”的论文，新的一章可以从偶数页开始。
+%
+%关于页眉页脚。奇数页页眉为：左边``上海交通大学硕士学位论文''，右边：``章节名''；偶数页页眉为：左边``上海交通大学硕士学位论文''，右边：``论文题目''。每一章的内容按照排书的习惯，均从奇数页开始。
+%
+%教务处要求参考文献必须符合GBT7714风格，学校明确提出使用这个标准而不是自己拍脑袋想出别的做法，应该算是谢天谢地了。使用这个模板，结合BibTeX，可以很方便地生成符合GB标准的参考文献列表。
+%
+%\section{模板更新说明}
+%\label{sec:update}
+%
+%我希望这个模板能够成为大家完成学位论文的助手。
+%我会在一段时间内(一个月？一年？)，继续维护这个模板，修正其中的错误和不理想的地方。
+%我还计划向模板中添加常用的``例子''，譬如表格、公式、图片的排版，这也是我知识汇总的。
+%完整的更新记录可参考附录A.
+%
+%不管怎么说，模板更新应该是一件好事。
+%如果``新的格式控制文件''产生的效果对你很有吸引力，那么不妨尝试一下。
+%应用新的格式控制文件是一件非常简单的事情：
+%你只要把原来的sjtuthesis.cls, sjtuthesis.cfg, GBxxx.bst覆盖(建议备份或者使用版本控制系统)，重新编译一遍，应该就OK了。
+%
+%我大力推荐大家使用\href{http://git-scm.com}{git}\cndash{}一个优秀的代码控制系统\cndash{}管理整个学位论文的协作过程。使用git合并(merge)最新版本的模板，是一件非常安全且无痛的工作。
+%
+

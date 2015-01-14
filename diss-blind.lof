@@ -1,0 +1,36 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1--1}{\ignorespaces 认知无线电网络组网结构}}{2}{figure.1.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3--1}{\ignorespaces 数据库驱动认知无线电网络示意图}}{14}{figure.3.1}
+\contentsline {figure}{\numberline {3--2}{\ignorespaces 用户初始化过程}}{15}{figure.3.2}
+\contentsline {figure}{\numberline {3--3}{\ignorespaces 用户注册过程}}{16}{figure.3.3}
+\contentsline {figure}{\numberline {3--4}{\ignorespaces 可用频谱查询过程}}{16}{figure.3.4}
+\contentsline {figure}{\numberline {3--5}{\ignorespaces 频谱查询消息内容}}{17}{figure.3.5}
+\contentsline {figure}{\numberline {3--6}{\ignorespaces 频谱通知消息内容}}{17}{figure.3.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4--1}{\ignorespaces 基于受限功率的位置推断攻击示意图}}{21}{figure.4.1}
+\contentsline {figure}{\numberline {4--2}{\ignorespaces 基于频道切换的位置推断攻击示意图}}{22}{figure.4.2}
+\contentsline {figure}{\numberline {4--3}{\ignorespaces 基于k-anonymity的可用频谱请求示意图}}{26}{figure.4.3}
+\contentsline {figure}{\numberline {4--4}{\ignorespaces 基于k-anonymity的可用频谱响应示意图}}{27}{figure.4.4}
+\contentsline {figure}{\numberline {4--5}{\ignorespaces 认知用户的位置隐私泄露}}{30}{figure.4.5}
+\contentsline {figure}{\numberline {4--6}{\ignorespaces 主用户的位置隐私泄露}}{31}{figure.4.6}
+\contentsline {figure}{\numberline {4--7}{\ignorespaces 认知用户的频谱效益与隐私}}{31}{figure.4.7}
+\contentsline {figure}{\numberline {4--8}{\ignorespaces 数据库的频谱效益与隐私}}{32}{figure.4.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5--1}{\ignorespaces 隐马尔可夫模型}}{34}{figure.5.1}
+\contentsline {figure}{\numberline {5--2}{\ignorespaces 跟踪过程中的粒子位置状态}}{40}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {5次查询后}}}{40}{figure.5.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {10次查询后}}}{40}{figure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {15次查询后}}}{40}{figure.5.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {20次查询后}}}{40}{figure.5.2}
+\contentsline {figure}{\numberline {5--3}{\ignorespaces 对不同运动形式用户的跟踪结果}}{41}{figure.5.3}
+\contentsline {figure}{\numberline {5--4}{\ignorespaces 隐私保护的查询和选择方案的性能}}{41}{figure.5.4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

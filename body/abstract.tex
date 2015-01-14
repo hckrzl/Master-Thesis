@@ -1,0 +1,24 @@
+%%==================================================
+%% abstract.tex for SJTU Master Thesis
+%% based on CASthesis
+%% modified by wei.jianwen@gmail.com
+%% version: 0.3a
+%% Encoding: UTF-8
+%% last update: Dec 5th, 2010
+%%==================================================
+
+\begin{abstract}
+
+认知无线电网络用于解决频谱固定分配政策导致的无线频谱资源的浪费,它允许认知用户使用其物理范围内未占用的频谱资源（频谱空洞）从而提高无线频谱的利用率。传统认知无线电网络通过频谱感知来确定可用频谱信息。联邦通信委员会近期提出了数据库驱动认知无线电网络的概念，允许使用数据库查询作为频谱感知的替代方法来获取可用频谱信息。它把可用频谱获取的任务从终端用户转移到中心数据库，使得用户能够获得更准确的频谱信息，而且大大简化了系统部署的复杂度。
+在数据库驱动认知无线电网络的频谱查询过程中，认知用户和数据库交互的数据与用户位置存在一定的相关性，导致网络中的主用户和认知用户都存在位置隐私和轨迹隐私泄露的风险。本文发现在数据库驱动认知无线电网络中，数据库能够根据认知用户的频谱使用信息来推测其位置，同时认知用户也能够根据收集到的可用频谱信息来推断网络中主用户的位置。本文分别提出了针对静止用户和移动用户的攻击方法。对于静止用户，我们提出一种通用的位置推断攻击方法，主用户和认知用户的位置都能够被对方锁定在一个较小的区域范围内。对于移动用户，数据库也可以根据收集到的频道注册信息实施一种基于概率的轨迹跟踪攻击。为抵御在频谱查询过程中的用户位置隐私泄露，本文提出一种改进的隐私保护的频谱查询方式，认知用户在频谱请求阶段通过查询临近区域的方式来模糊自身位置，并基于这些信息进行频道选择。数据库在提供可用频谱阶段也将主用户位置进行模糊处理来增加推断攻击的不确定性。最后，认知用户对隐私保护程度进行权衡并选择最大程度上实现隐私保护的频道。本文将提出的攻击方法和隐私保护方法进行仿真测试，实验结果证明所提出的隐私保护方案可以很大程度上提高数据库驱动认知无线电网络中的用户位置隐私。
+
+  \keywords{\large 认知无线电网络 \quad 位置隐私 \quad 轨迹隐私 \quad 可用频谱查询　\quad 隐私保护}
+\end{abstract}
+
+\begin{englishabstract}
+
+The concept of Cognitive Radio Networks (CRNs) was first proposed in 1999. It is considered to solve the problem of wireless spectrum wastage under the paradigm of fixed spectrum allocation. In CRNs, unregistered users (secondary users) can search and access the unoccupied spectrum (spectrum hole) temporarily to enhance the spectrum utilization of wireless spectrum. In traditional CRNs, secondary users should have to implement spectrum sensing to determine the available spectrum. Federal Communication Committee (FCC) proposed database-driven CRNs, in which secondary users could obtain available spectrum via querying the database instead of spectrum sensing based on the pre-established channel. Database-driven CRNs shifts the function of available spectrum retrieval from terminal devices to the central database and enable secondary users to obtain more accuracy available spectrum information and in the meaning time, simplify the deployment of the networks. 
+In database-driven CRNs, secondary users get the available spectrum information via the process of spectrum query. In the process spectrum query, since the communication contents between secondary users and the database are correlated with the locations of primary users and secondary users, there are threats of privacy leaking. In this article, we identify that the database is able to infer the locations of secondary users based on the utilized channels of secondary users. On the other hand, secondary users could also infer the locations of primary users based on the spectrum availability information. For fixed users, we proposed a general location inference attack scheme, based on which the primary users and secondary users could be localized in a relative small area. For mobile secondary users, the database could also launch probabilistic tracking attack based on the collected information of channel utilization. To thwart the location and trajectory privacy leaking in spectrum query, we proposed an improved privacy preserving spectrum query scheme, in which secondary users obfuscate the submitted location, which could also be utilized to help determine the best channel. Then the database perturbs the locations of primary users before calculating the available spectrum information. Finally, secondary users estimate the location privacy level to determine the selected channel. We conduct experiments to verify the proposed location inference attacks and location protection schemes. The results of the experiments show that the privacy preserving schemes significantly improve the users’ location privacy and trajectory privacy in database-driven CRNs.
+
+  \englishkeywords{\large Cognitive Radio Networks, Location Privacy, Trajectory Privacy, Available Spectum Query, Privacy Preserving}
+\end{englishabstract}

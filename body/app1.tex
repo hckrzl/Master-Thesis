@@ -1,0 +1,55 @@
+%%==================================================
+%% app1.tex for SJTU Master Thesis
+%% based on CASthesis
+%% modified by wei.jianwen@gmail.com
+%% version: 0.3a
+%% Encoding: UTF-8
+%% last update: Dec 5th, 2010
+%%==================================================
+
+\chapter{基于私有信息提取的查询盲化方案}
+\label{chap:updatelog}
+
+在数据库驱动认知无线电网络中，假设数据库管理的区域为$C$，每个区域划分为若干小区域，表示为$c_{ij}$。数据库在区域$C$上通过计算得到的频谱信息数据库表示为$M$，每个区域$c_{ij}$对应的可用频谱信息表示为$m_{ij}$。认知用户进行可用频谱信息请求时，关心$m_{ij}$的内容，但是想要将$i$和$j$保密。基于私有信息提取的查询盲化方案如下：
+
+\begin{enumerate}
+
+\item 初始化：
+
+首先认知用户在本地生成一个大素数$p$和两个随机数$b,d$，$b,d$作为请求过程中的盲化因子。计算$b^{-1}$和$d^{-1}$。然后生成两个随机向量$\vec v_{1} = (a_{1},a_{2},...,a_{n})$和$\vec v_{2} = (c_{1},c_{2},...,c_{n})$，向量中的元素需要满足：
+
+\begin{displaymath}
+a_{i},c_{i} < \frac{\sqrt{p}-\sqrt{N-1}}{nN\sqrt{N-1}},1 \leq i \leq n
+\end{displaymath}
+
+式中，$n$是可用频谱信息矩阵向量的维数；$N=2^{K}$，$K$为频道数量。
+
+\item 查询信息盲化：
+
+认知用户对$\vec v_{1}$和$\vec v_{２}$按照如下方式进行处理：
+\begin{displaymath}
+\vec v_{1}' = (a_{1}',a_{2}',...,a_{n}')=N \cdot \vec v_{1}' + \vec h_{i} = (a_{1}N,...,a_{i}N+1,...,a_{n}N)
+\end{displaymath}
+
+\begin{displaymath}
+\vec v_{2}' = (c_{1}',c_{2}',...,c_{n}')=N \cdot \vec v_{2}' + \vec h_{j} = (c_{1}N,...,c_{j}N+1,...,c_{n}N)
+\end{displaymath}
+
+式中$\vec h_{i},\vec h_{j}$是单位向量，向量的第$j$或$j$个元素为1，其他元素全部为0。为隐藏$\vec v_{1}$和$\vec v_{2}$的真实值，认知用户使用盲化因子$b$和$d$分别对$\vec v_{1}'$和$\vec v_{2}'$进行处理如下：
+
+\begin{displaymath}
+\vec u_{1} = b \cdot \vec v_{1}' \ mod p = (ba_{1}N,...,b(a_{i}N+1),...,ba_{n}N) \ mod p
+\end{displaymath}
+
+\begin{displaymath}
+\vec u_{2} = d \cdot \vec v_{2}' \ mod p = (dc_{1}N,...,d(c_{i}N+1),...,dc_{n}N) \ mod p
+\end{displaymath}
+然后认知用户向数据库发送查询消$Q=(\vec u_{1},\vec u_{2})$。
+
+\item 查询执行：
+数据库在收到查询消息$Q$之后，首先计算查询结果$g = \vec u_{1} \cdot M \cdot \vec u_{2}^{T}$，此时不需要进行模运算。式中$\vec u_{2}^{T}$是$\vec u_{2}$的转置。然后数据库将$g$作为响应消息发给认知用户。这个操作与直接传输可用频谱信息矩阵$M$在很大程度上能够减小传输开销。
+
+\item 结果恢复：
+为恢复可用频谱信息，认知用户计算$g_{1} = b^{-1} \cdot g \cdot d^{-1}$，因而而频谱可用信息$m_{ij}=g_{1} \ mod p \ mod N$。
+
+\end{enumerate}

@@ -1,0 +1,21 @@
+@inproceedings{gao2013location,
+  title={Location privacy in database-driven cognitive radio networks: Attacks and countermeasures},
+  author={Gao, Zhaoyu and Zhu, Haojin and Liu, Yao and Li, Muyuan and Cao, Zhenfu},
+  booktitle={INFOCOM, 2013 Proceedings IEEE},
+  pages={2751--2759},
+  year={2013},
+  organization={IEEE}
+}
+
+
+
+}
+
+
+
+@article{capacity,
+  title={Capacity considerations for secondary networks in tv white space},
+  author={Hessar, Farzad and Roy, Sumit},
+  journal={arXiv preprint arXiv:1304.1785},
+  year={2013}
+}

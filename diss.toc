@@ -1,0 +1,38 @@
+\let \CTEX@spaceChar \relax 
+\contentsline {chapter}{摘要}{i}{chapter*.1}
+\contentsline {chapter}{ABSTRACT}{iii}{chapter*.2}
+\contentsline {chapter}{目\CTEX@spaceChar \CTEX@spaceChar 录}{v}{chapter*.3}
+\contentsline {chapter}{插图索引}{vii}{chapter*.4}
+\contentsline {chapter}{主要符号对照表}{ix}{chapter*.5}
+\contentsline {chapter}{\numberline {第一章\hspace {0.3em}}研究背景}{1}{chapter.1}
+\contentsline {chapter}{\numberline {第二章\hspace {0.3em}}相关工作}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}数据库驱动认知无线电网络}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}隐私保护}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}认知无线电网络中的安全与隐私}{10}{section.2.3}
+\contentsline {chapter}{\numberline {第三章\hspace {0.3em}}数据库驱动认知无线电的相关标准}{13}{chapter.3}
+\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}数据库驱动认知无线电网络中的位置推断攻击与保护}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}系统模型}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}针对静止用户的位置推断攻击}{20}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}基于受限功率的位置推断攻击}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}基于频道切换的位置推断攻击}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}统一的位置推断攻击算法}{22}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}针对位置推断攻击的解决方案}{24}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}频谱效益和隐私的度量}{24}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}频谱效益的度量}{24}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}隐私的度量}{25}{subsubsection.4.3.1.2}
+\contentsline {subsection}{\numberline {4.3.2}隐私保护的频谱查询方案}{26}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}基于$k$-anonymity的请求}{26}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}基于$k$-anonymity的响应}{26}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}改进的频道选择}{28}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}参数决定}{28}{subsubsection.4.3.2.4}
+\contentsline {subsection}{\numberline {4.3.3}位置推断攻击与隐私保护的实验验证}{29}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}数据库驱动认知无线电网络中的轨迹跟踪攻击与保护}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}对认知用户轨迹跟踪攻击}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}轨迹跟踪攻击的解决方案}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}轨迹跟踪攻击和隐私保护方案验证}{39}{section.5.3}
+\contentsline {chapter}{全文总结}{43}{chapter*.6}
+\contentsline {chapter}{\numberline {附录\nobreakspace {}A\hspace {0.3em}}基于私有信息提取的查询盲化方案}{45}{appendix.A}
+\contentsline {chapter}{参考文献}{47}{appendix*.7}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{53}{appendix*.8}
+\contentsline {chapter}{攻读学位期间发表的学术论文目录}{55}{appendix*.9}
+\contentsline {chapter}{攻读学位期间参与的项目}{57}{appendix*.10}

@@ -1,0 +1,29 @@
+% DO NOT DELETE This File!!!
+
+% encoding: UTF-8
+
+% empty file
+
+
+@article{akyildiz2006next,
+  title={NeXt generation/dynamic spectrum access/cognitive radio wireless networks: a survey},
+  author={Akyildiz, Ian F and Lee, Won-Yeol and Vuran, Mehmet C and Mohanty, Shantidev},
+  journal={Computer Networks},
+  volume={50},
+  number={13},
+  pages={2127--2159},
+  year={2006},
+  publisher={Elsevier}
+}
+
+
+@article{mitola1999cognitive,
+  title={Cognitive radio: making software radios more personal},
+  author={Mitola, Joseph and Maguire Jr, Gerald Q},
+  journal={Personal Communications, IEEE},
+  volume={6},
+  number={4},
+  pages={13--18},
+  year={1999},
+  publisher={IEEE}
+}

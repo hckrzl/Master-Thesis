@@ -1,0 +1,330 @@
+\begin{thebibliography}{47}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Akyildiz et al.(2006)]{akyildiz2006next}
+\textsc{Akyildiz I~F, Lee W~Y, Vuran M~C}, et al.
+\newblock NeXt generation/dynamic spectrum access/cognitive radio wireless
+  networks: a survey[J].
+\newblock Computer Networks, 2006, 50(13):2127--2159.
+
+\bibitem[Mitola and Maguire~Jr(1999)]{mitola1999cognitive}
+\textsc{Mitola J, Maguire~Jr G~Q}.
+\newblock Cognitive radio: making software radios more personal[J].
+\newblock Personal Communications, IEEE, 1999, 6(4):13--18.
+
+\bibitem[Gao et al.(2013)]{gao2013location}
+\textsc{Gao Z, Zhu H, Liu Y}, et al.
+\newblock
+\newblock Location privacy in database-driven cognitive radio networks: Attacks
+  and countermeasures[C]//INFOCOM, 2013 Proceedings IEEE.
+\newblock .[S.l.]: [s.n.] , 2013:2751--2759.
+
+\bibitem[Gurney et al.(2008)]{gurney2008geo}
+\textsc{Gurney D, Buchwald G, Ecklund L}, et al.
+\newblock
+\newblock Geo-location database techniques for incumbent protection in the TV
+  white space[C]//New Frontiers in Dynamic Spectrum Access Networks, 2008.
+  DySPAN 2008. 3rd IEEE Symposium on.
+\newblock .[S.l.]: [s.n.] , 2008:1--9.
+
+\bibitem[Murty et al.(2012)]{murty2012senseless}
+\textsc{Murty R, Chandra R, Moscibroda T}, et al.
+\newblock Senseless: A database-driven white spaces network[J].
+\newblock Mobile Computing, IEEE Transactions on, 2012, 11(2):189--203.
+
+\bibitem[Ying et al.(2013)]{ying2013exploring}
+\textsc{Ying X, Zhang J, Yan L}, et al.
+\newblock
+\newblock Exploring indoor white spaces in metropolises[C]//Proceedings of the
+  19th annual international conference on Mobile computing \& networking.
+\newblock .[S.l.]: [s.n.] , 2013:255--266.
+
+\bibitem[Zhang and Banerjee()]{zhangvehicle}
+\textsc{Zhang T, Banerjee S}.
+\newblock
+\newblock A Vehicle-based Measurement Framework for Enhancing Whitespace
+  Spectrum Databases[J].
+
+\bibitem[Wang and Zhang(2014)]{wang2014location}
+\textsc{Wang W, Zhang Q}.
+\newblock
+\newblock
+\newblock Location Privacy Preservation in Cognitive Radio Networks[M].[S.l.]:
+  Springer, 2014.
+
+\bibitem[Sweeney(2002)]{sweeney2002k}
+\textsc{Sweeney L}.
+\newblock k-anonymity: A model for protecting privacy[J].
+\newblock International Journal of Uncertainty, Fuzziness and Knowledge-Based
+  Systems, 2002, 10(05):557--570.
+
+\bibitem[Machanavajjhala et al.(2007)]{machanavajjhala2007diversity}
+\textsc{Machanavajjhala A, Kifer D, Gehrke J}, et al.
+\newblock l-diversity: Privacy beyond k-anonymity[J].
+\newblock ACM Transactions on Knowledge Discovery from Data (TKDD), 2007,
+  1(1):3.
+
+\bibitem[Wong et al.(2006)]{wong2006alpha}
+\textsc{Wong R~C~W, Li J, Fu A~W~C}, et al.
+\newblock
+\newblock ($\alpha$, k)-anonymity: an enhanced k-anonymity model for privacy
+  preserving data publishing[C]//Proceedings of the 12th ACM SIGKDD
+  international conference on Knowledge discovery and data mining.
+\newblock .[S.l.]: [s.n.] , 2006:754--759.
+
+\bibitem[Adam and Worthmann(1989)]{adam1989security}
+\textsc{Adam N~R, Worthmann J~C}.
+\newblock Security-control methods for statistical databases: a comparative
+  study[J].
+\newblock ACM Computing Surveys (CSUR), 1989, 21(4):515--556.
+
+\bibitem[Liu et al.(2012)]{liu2012cloud}
+\textsc{Liu B, Jiang Y, Sha F}, et al.
+\newblock
+\newblock Cloud-enabled privacy-preserving collaborative learning for mobile
+  sensing[C]//Proceedings of the 10th ACM Conference on Embedded Network Sensor
+  Systems.
+\newblock .[S.l.]: [s.n.] , 2012:57--70.
+
+\bibitem[Du and Zhan(2003)]{du2003using}
+\textsc{Du W, Zhan Z}.
+\newblock
+\newblock Using randomized response techniques for privacy-preserving data
+  mining[C]//Proceedings of the ninth ACM SIGKDD international conference on
+  Knowledge discovery and data mining.
+\newblock .[S.l.]: [s.n.] , 2003:505--510.
+
+\bibitem[Dwork(2006)]{dwork2006differential}
+\textsc{Dwork C}.
+\newblock
+\newblock
+\newblock Differential privacy[M]//Automata, languages and programming.[S.l.]:
+  Springer, 2006:1--12.
+
+\bibitem[Cormode et al.(2011)]{cormode2011differentially}
+\textsc{Cormode G, Procopiuc M, Srivastava D}, et al.
+\newblock Differentially private publication of sparse data[J].
+\newblock arXiv preprint arXiv:1103.0825, 2011.
+
+\bibitem[Dwork et al.(2010)]{dwork2010differential}
+\textsc{Dwork C, Naor M, Pitassi T}, et al.
+\newblock
+\newblock Differential privacy under continual observation[C]//Proceedings of
+  the 42nd ACM symposium on Theory of computing.
+\newblock .[S.l.]: [s.n.] , 2010:715--724.
+
+\bibitem[Li et al.(2011){\natexlab{a}}]{li2011provably}
+\textsc{Li N, Qardaji W~H, Su D}.
+\newblock Provably private data anonymization: Or, k-anonymity meets
+  differential privacy[J].
+\newblock CoRR, abs/1101.2604, 2011, 49:55.
+
+\bibitem[Chor et al.(1998)]{chor1998private}
+\textsc{Chor B, Kushilevitz E, Goldreich O}, et al.
+\newblock Private information retrieval[J].
+\newblock Journal of the ACM (JACM), 1998, 45(6):965--981.
+
+\bibitem[Freudiger et al.(2012)]{freudiger2012evaluating}
+\textsc{Freudiger J, Shokri R, Hubaux J~P}.
+\newblock
+\newblock
+\newblock Evaluating the privacy risk of location-based services[M]//Financial
+  Cryptography and Data Security.[S.l.]: Springer, 2012:31--46.
+
+\bibitem[Kido et al.(2005)]{kido2005anonymous}
+\textsc{Kido H, Yanagisawa Y, Satoh T}.
+\newblock
+\newblock An anonymous communication technique using dummies for location-based
+  services[C]//Pervasive Services, 2005. ICPS'05. Proceedings. International
+  Conference on.
+\newblock .[S.l.]: [s.n.] , 2005:88--97.
+
+\bibitem[Mokbel et al.(2006)]{mokbel2006new}
+\textsc{Mokbel M~F, Chow C~Y, Aref W~G}.
+\newblock
+\newblock The new Casper: query processing for location services without
+  compromising privacy[C]//Proceedings of the 32nd international conference on
+  Very large data bases.
+\newblock .[S.l.]: [s.n.] , 2006:763--774.
+
+\bibitem[Ghinita et al.(2008)]{ghinita2008private}
+\textsc{Ghinita G, Kalnis P, Khoshgozaran A}, et al.
+\newblock
+\newblock Private queries in location based services: anonymizers are not
+  necessary[C]//Proceedings of the 2008 ACM SIGMOD international conference on
+  Management of data.
+\newblock .[S.l.]: [s.n.] , 2008:121--132.
+
+\bibitem[Gedik and Liu(2005)]{gedik2005location}
+\textsc{Gedik B, Liu L}.
+\newblock
+\newblock Location privacy in mobile systems: A personalized anonymization
+  model[C]//Distributed Computing Systems, 2005. ICDCS 2005. Proceedings. 25th
+  IEEE International Conference on.
+\newblock .[S.l.]: [s.n.] , 2005:620--629.
+
+\bibitem[Xu and Cai(2009)]{xu2009feeling}
+\textsc{Xu T, Cai Y}.
+\newblock
+\newblock Feeling-based location privacy protection for location-based
+  services[C]//Proceedings of the 16th ACM conference on Computer and
+  communications security.
+\newblock .[S.l.]: [s.n.] , 2009:348--357.
+
+\bibitem[Shokri et al.(2012)]{shokri2012protecting}
+\textsc{Shokri R, Theodorakopoulos G, Troncoso C}, et al.
+\newblock
+\newblock Protecting location privacy: optimal strategy against localization
+  attacks[C]//Proceedings of the 2012 ACM conference on Computer and
+  communications security.
+\newblock .[S.l.]: [s.n.] , 2012:617--627.
+
+\bibitem[Luper et al.(2007)]{luper2007spatial}
+\textsc{Luper D, Cameron D, Miller J}, et al.
+\newblock
+\newblock Spatial and Temporal Target Association through Semantic Analysis and
+  GPS Data Mining.[C]//IKE.
+\newblock .[S.l.]: [s.n.] , 2007，7:25--28.
+
+\bibitem[Abul et al.(2008)]{abul2008never}
+\textsc{Abul O, Bonchi F, Nanni M}.
+\newblock
+\newblock Never walk alone: Uncertainty for anonymity in moving objects
+  databases[C]//Data Engineering, 2008. ICDE 2008. IEEE 24th International
+  Conference on.
+\newblock .[S.l.]: [s.n.] , 2008:376--385.
+
+\bibitem[Terrovitis and Mamoulis(2008)]{terrovitis2008privacy}
+\textsc{Terrovitis M, Mamoulis N}.
+\newblock
+\newblock Privacy preservation in the publication of trajectories[C]//Mobile
+  Data Management, 2008. MDM'08. 9th International Conference on.
+\newblock .[S.l.]: [s.n.] , 2008:65--72.
+
+\bibitem[Chen et al.(2008){\natexlab{a}}]{chen2008defense}
+\textsc{Chen R, Park J~M, Reed J~H}.
+\newblock Defense against primary user emulation attacks in cognitive radio
+  networks[J].
+\newblock Selected Areas in Communications, IEEE Journal on, 2008,
+  26(1):25--37.
+
+\bibitem[Bian and Park(2006)]{bian2006mac}
+\textsc{Bian K, Park J~M}.
+\newblock
+\newblock MAC-layer misbehaviors in multi-hop cognitive radio
+  networks[C]//US-Korea Conference on Science, Technology, and Entrepreneurship
+  (UKC2006).
+\newblock .[S.l.]: [s.n.] , 2006:65--73.
+
+\bibitem[Li et al.(2012)]{li2012location}
+\textsc{Li S, Zhu H, Gao Z}, et al.
+\newblock
+\newblock Location privacy preservation in collaborative spectrum
+  sensing[C]//INFOCOM, 2012 Proceedings IEEE.
+\newblock .[S.l.]: [s.n.] , 2012:729--737.
+
+\bibitem[Chen et al.(2008){\natexlab{b}}]{chen2008robust}
+\textsc{Chen R, Park J~M, Bian K}.
+\newblock
+\newblock Robust distributed spectrum sensing in cognitive radio
+  networks[C]//INFOCOM 2008. The 27th Conference on Computer Communications.
+  IEEE.
+\newblock .[S.l.]: [s.n.] , 2008{\natexlab{b}}.
+
+\bibitem[Quan et al.(2009)]{quan2009optimal}
+\textsc{Quan Z, Cui S, Sayed A~H}, et al.
+\newblock Optimal multiband joint detection for spectrum sensing in cognitive
+  radio networks[J].
+\newblock Signal Processing, IEEE Transactions on, 2009, 57(3):1128--1140.
+
+\bibitem[He et al.(2013)]{he2013byzantine}
+\textsc{He X, Dai H, Ning P}.
+\newblock A Byzantine attack defender in cognitive radio networks: the
+  conditional frequency check[J].
+\newblock Wireless Communications, IEEE Transactions on, 2013,
+  12(5):2512--2523.
+
+\bibitem[Li et al.(2011){\natexlab{b}}]{li2011believe}
+\textsc{Li S, Zhu H, Yang B}, et al.
+\newblock
+\newblock Believe yourself: a user-centric misbehavior detection scheme for
+  secure collaborative spectrum sensing[C]//Communications (ICC), 2011 IEEE
+  International Conference on.
+\newblock .[S.l.]: [s.n.] , 2011{\natexlab{b}}:1--5.
+
+\bibitem[Bahrak et al.(2014)]{bahrak2014protecting}
+\textsc{Bahrak B, Bhattarai S, Ullah A}, et al.
+\newblock
+\newblock Protecting the primary users' operational privacy in spectrum
+  sharing[C]//Dynamic Spectrum Access Networks (DYSPAN), 2014 IEEE
+  International Symposium on.
+\newblock .[S.l.]: [s.n.] , 2014:236--247.
+
+\bibitem[Zhu et al.(2014)]{zhu2014protocol}
+\textsc{Zhu L, Chen V, Malyar J}, et al.
+\newblock Protocol to Access White-Space (PAWS) Databases[J].
+\newblock 2014.
+
+\bibitem[Bahrak(2013)]{bahrak2013ex}
+\textsc{Bahrak B}.
+\newblock
+\newblock Ex Ante Approaches for Security, Privacy, and Enforcement in Spectrum
+  Sharing[D].[S.l.]: Virginia Polytechnic Institute and State University, 2013.
+
+\bibitem[Hessar and Roy(2013)]{capacity}
+\textsc{Hessar F, Roy S}.
+\newblock Capacity considerations for secondary networks in tv white space[J].
+\newblock arXiv preprint arXiv:1304.1785, 2013.
+
+\bibitem[Min et al.(2011)]{min2011opportunistic}
+\textsc{Min A~W, Kim K~H, Singh J~P}, et al.
+\newblock
+\newblock Opportunistic spectrum access for mobile cognitive
+  radios[C]//INFOCOM, 2011 Proceedings IEEE.
+\newblock .[S.l.]: [s.n.] , 2011:2993--3001.
+
+\bibitem[Gao et al.(2014)]{gao2014supporting}
+\textsc{Gao B, Park J~M, Yang Y}.
+\newblock
+\newblock Supporting mobile users in database-driven opportunistic spectrum
+  access[C]//Proceedings of the 15th ACM international symposium on Mobile ad
+  hoc networking and computing.
+\newblock .[S.l.]: [s.n.] , 2014:215--224.
+
+\bibitem[Bergman(1999)]{bergman1999recursive}
+\textsc{Bergman N}.
+\newblock Recursive Bayesian Estimation[J].
+\newblock Department of Electrical Engineering, Link{\"o}ping University,
+  Link{\"o}ping Studies in Science and Technology. Doctoral dissertation, 1999,
+  579.
+
+\bibitem[Elliott et al.(1994)]{hmm}
+\textsc{Elliott R~J, Aggoun L, Moore J~B}.
+\newblock
+\newblock
+\newblock Hidden Markov Models[M].[S.l.]: Springer, 1994.
+
+\bibitem[Bar-Shalom et al.(2004)]{bar2004estimation}
+\textsc{Bar-Shalom Y, Li X~R, Kirubarajan T}.
+\newblock
+\newblock
+\newblock Estimation with applications to tracking and navigation: theory
+  algorithms and software[M].[S.l.]: John Wiley \& Sons, 2004.
+
+\bibitem[Arulampalam et al.(2002)]{arulampalam2002tutorial}
+\textsc{Arulampalam M~S, Maskell S, Gordon N}, et al.
+\newblock A tutorial on particle filters for online nonlinear/non-Gaussian
+  Bayesian tracking[J].
+\newblock Signal Processing, IEEE Transactions on, 2002, 50(2):174--188.
+
+\bibitem[Hastings(1970)]{hastings1970monte}
+\textsc{Hastings W~K}.
+\newblock Monte Carlo sampling methods using Markov chains and their
+  applications[J].
+\newblock Biometrika, 1970, 57(1):97--109.
+
+\end{thebibliography}
